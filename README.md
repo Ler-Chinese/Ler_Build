@@ -8,6 +8,7 @@ This is a tool used for build a cpp project.\
 If you want use it in windows please run StartAnsi.ps1 first\
 
 # Example code:
+'cpp'
 /*\
 #include "Ler_build.h"\
 \
