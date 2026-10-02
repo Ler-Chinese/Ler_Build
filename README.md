@@ -22,10 +22,10 @@ int main()
 
   AddIncludeDir("./include");
 
-  AddLibDir("./lib");\
+  AddLibDir("./lib");
 
-  Compile();\
-  RunProgram();\
+  Compile();
+  RunProgram();
 }
 ```
 
