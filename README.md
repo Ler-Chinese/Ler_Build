@@ -32,12 +32,12 @@ int main()
 
 # Function list:\
 ```cpp
-void InitBuild()\
-void Compile();\
-void RunProgram();\
-void AddSrcFile(const char* Src_File);\
-void AddIncludeDir(const char* Include_Dir);\
-void AddLibDir(const char* Lib_Dir);\
-void AddLibFile(const char* Lib_File);\
-void SetOutputFile(const char* Project_Name);\
+void InitBuild();
+void Compile();
+void RunProgram();
+void AddSrcFile(const char* Src_File);
+void AddIncludeDir(const char* Include_Dir);
+void AddLibDir(const char* Lib_Dir);
+void AddLibFile(const char* Lib_File);
+void SetOutputFile(const char* Project_Name);
 ```
