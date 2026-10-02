@@ -30,7 +30,7 @@ int main()
 ```
 
 
-# Function list:\
+# Function list:
 ```cpp
 void InitBuild();
 void Compile();
