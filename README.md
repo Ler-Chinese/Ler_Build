@@ -9,7 +9,6 @@ If you want use it in windows please run StartAnsi.ps1 first\
 
 # Example code:
 ```cpp
-/*\
 #include "Ler_build.h"\
 \
 int main()\
@@ -26,7 +25,6 @@ int main()\
   Compile();\
   RunProgram();\
 }\
-*/\
 ```
 
 
