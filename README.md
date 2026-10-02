@@ -1,5 +1,6 @@
 # Ler_Build
 # by Ler_Chinese
+![just a photo](/assets/img/philly-magic-garden.jpg "Magic Gardens")
 \
 This is a tool used for build a cpp project.\
 这是一个C++项目的构建工具
