@@ -1,9 +1,35 @@
 # Ler_Build
-Ler_Build:\
-by Ler_Chinese\
+# by Ler_Chinese
 \
 This is a tool used for build a cpp project.\
-Function list:\
+
+# Notice:
+
+If you want use it in windows please run StartAnsi.ps1 first\
+
+# Example code:
+/*\
+#include "Ler_build.h"\
+\
+int main()\
+{\
+  InitBuild();\
+  SetOutputFile("./project/project");\
+\
+  AddSrcFile("./src/main.cpp");\
+\
+  AddIncludeDir("./include");\
+\
+  AddLibDir("./lib");\
+\
+  Compile();\
+  RunProgram();\
+}\
+*/\
+
+
+
+# Function list:\
 \
 void InitBuild();//Init Ler_Build system\
 void Compile();//Compile Project\
