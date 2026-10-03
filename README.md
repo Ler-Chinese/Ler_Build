@@ -13,14 +13,14 @@ If you want use it in windows please run StartAnsi.ps1 first\
 
 # Project structure:
 ```cpp
-------root------
-  /-src
-    #......
-  /.include
-    #......
-  #Ler_Build.h
-  #Ler_Build.cpp
-  #make.cpp
+/-----root------
+|  /-src
+|    |#......
+|  /-include
+|    |#......
+|  #Ler_Build.h
+|  #Ler_Build.cpp
+|  #make.cpp
 ------------------
 ```
 
