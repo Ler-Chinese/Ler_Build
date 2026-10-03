@@ -9,7 +9,7 @@ This is a tool used for build a cpp project.\
 # Notice:
 
 If you want use it in windows please run StartAnsi.ps1 first\
-如果你想要在windows中正常用这个工具的话, 请先运行 StartAnsi.ps1
+如果你想要在windows中正常用这个工具的话, 请先运行 EnableAnsi.ps1
 
 # Example code:
 ```cpp
