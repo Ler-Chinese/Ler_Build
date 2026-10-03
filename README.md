@@ -1,7 +1,7 @@
 # Ler_Build
 ## by Ler_Chinese
-\
-## This is a tool used for build a cpp project.\
+
+## This is a tool used for build a cpp project.
 ## 这是一个C++项目的构建工具
 
 ![Picture](./紅白蝶.jpg "紅白蝶")
