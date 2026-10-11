@@ -66,19 +66,8 @@ void RunProgram()
   system(__Tmp_output_file.c_str());
 }
 
-void AddSrcFile(const char* Src_File)
-{
-  src_file += Src_File;
-  src_file += " ";
-}
-
-void AddIncludeDir(const char* Include_Dir)
-{
-  include_dir += "-I ";
-  include_dir += Include_Dir;
-  include_dir += " ";
-}
-
+void AddSrcFile(const char* Src_File){ src_file += Src_File + " "; }
+void AddIncludeDir(const char* Include_Dir){ include_dir += "-I " +  Include_Dir + " "; }
 void AddLibDir    (const char* Lib_Dir)     { lib_dir   += "-L " + Lib_Dir + " "; }
 void AddLibFile   (const char* Lib_File)    { lib_file  += "-l" + Lib_File + " "; }
 void AddOrder     (const char* Order)       { order     += Order + " "; }
