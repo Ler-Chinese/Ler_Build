@@ -43,6 +43,8 @@ int main()
 
   AddLibDir("./lib");
 
+  AddOrder("-std=c++11);
+
   Compile();
   RunProgram();
 }
@@ -51,6 +53,7 @@ int main()
 
 ## Function list:
 ```cpp
+//----Function List----
 void InitBuild();
 void Compile();
 void RunProgram();
@@ -58,5 +61,7 @@ void AddSrcFile(const char* Src_File);
 void AddIncludeDir(const char* Include_Dir);
 void AddLibDir(const char* Lib_Dir);
 void AddLibFile(const char* Lib_File);
+void AddOrder(const char* Order);
 void SetOutputFile(const char* Project_Name);
+//---------------------
 ```
