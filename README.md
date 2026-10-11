@@ -8,7 +8,7 @@
 
 ## Notice:
 
-If you want use it in windows please run StartAnsi.ps1 first\
+If you want use it in windows please run EnableAnsi.ps1 first\
 如果你想要在windows中正常用这个工具的话, 请先运行 EnableAnsi.ps1
 
 ## Project structure:
