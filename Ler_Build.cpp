@@ -6,12 +6,15 @@
 #include <algorithm>
 #include <filesystem>
 
+//-----string List-----
 std::string compile_order;
 std::string src_file;
 std::string include_dir;
 std::string lib_dir;
 std::string lib_file;
+std::string order;
 std::string output_dir = "NULL";
+//---------------------
 
 void InitBuild()
 {
@@ -20,12 +23,15 @@ void InitBuild()
 
 void Compile()
 {
-  compile_order = "g++ " +  include_dir + lib_dir + src_file + lib_file + "-o " + output_dir;;
+  compile_order = "g++ " +  include_dir + lib_dir + src_file + lib_file + "-o " + output_dir + " " + order; // Build Conpile order
+  
   printf(GREEN "[INFO]" RESET "Compile Order: %s\n", compile_order.c_str());
+  
   if(system(compile_order.c_str()) == 0) {
     printf(GREEN "[INFO]" RESET "Success in compile programe. Output file: %s\n", output_dir.c_str());
     return;
   }
+  
   exit(1);
 }
 
@@ -34,6 +40,7 @@ void RunProgram()
   std::string __Tmp_output_dir;
   std::string __Tmp_output_file;
   std::error_code ErrCode;
+  
   __Tmp_output_dir += output_dir;
   
   while(!__Tmp_output_dir.empty()) {
@@ -55,6 +62,7 @@ void RunProgram()
   //else:
   std::reverse(__Tmp_output_file.begin(), __Tmp_output_file.end());
   std::filesystem::current_path(__Tmp_output_dir.c_str());
+  
   system(__Tmp_output_file.c_str());
 }
 
@@ -71,21 +79,7 @@ void AddIncludeDir(const char* Include_Dir)
   include_dir += " ";
 }
 
-void AddLibDir(const char* Lib_Dir)
-{
-  lib_dir += "-L ";
-  lib_dir += Lib_Dir;
-  lib_dir += " ";
-}
-
-void AddLibFile(const char* Lib_File)
-{
-  lib_file += "-l";
-  lib_file += Lib_File;
-  lib_file += " ";
-}
-
-void SetOutputFile(const char* Output_File)
-{
-  output_dir = Output_File;
-}
+void AddLibDir    (const char* Lib_Dir)     { lib_dir   += "-L " + Lib_Dir + " "; }
+void AddLibFile   (const char* Lib_File)    { lib_file  += "-l" + Lib_File + " "; }
+void AddOrder     (const char* Order)       { order     += Order + " "; }
+void SetOutputFile(const char* Output_File) { output_dir = Output_File; }
