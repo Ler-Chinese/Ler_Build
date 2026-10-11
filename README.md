@@ -43,7 +43,7 @@ int main()
 
   AddLibDir("./lib");
 
-  AddOrder("-std=c++11);
+  AddOrder("-std=c++11");
 
   Compile();
   RunProgram();
