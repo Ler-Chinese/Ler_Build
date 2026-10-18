@@ -1,8 +1,8 @@
 # Ler_Build
 ## by Ler_Chinese
 
-## This is a tool used for build a cpp project.
-## 这是一个C++项目的构建工具
+## This is a tool used for build a C / Cpp project.
+## 这是一个C/C++项目的构建工具
 
 ![Picture](./紅白蝶.jpg "紅白蝶")
 
@@ -34,7 +34,7 @@ If you want use it in windows please run EnableAnsi.ps1 first\
 
 int main()
 {
-  InitBuild();
+  InitBuild("C++");// "Cpp" or "C"
   SetOutputFile("./project/project");
 
   AddSrcFile("./src/main.cpp");
