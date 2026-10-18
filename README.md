@@ -54,14 +54,14 @@ int main()
 ## Function list:
 ```cpp
 //----Function List----
-void InitBuild();
+void InitBuild(const std::string Language);
 void Compile();
 void RunProgram();
-void AddSrcFile(const char* Src_File);
-void AddIncludeDir(const char* Include_Dir);
-void AddLibDir(const char* Lib_Dir);
-void AddLibFile(const char* Lib_File);
-void AddOrder(const char* Order);
-void SetOutputFile(const char* Project_Name);
+void AddSrcFile(const std::string Src_File);
+void AddIncludeDir(const std::string Include_Dir);
+void AddLibDir(const std::string Lib_Dir);
+void AddLibFile(const std::string Lib_File);
+void AddOrder(const std::string Order);
+void SetOutputFile(const std::string Project_Name);
 //---------------------
 ```
