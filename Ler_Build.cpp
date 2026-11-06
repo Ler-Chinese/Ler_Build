@@ -17,7 +17,7 @@ std::string order;                              // The additional order         
 std::string output_dir = "NULL";                // The ouput file (path + file) in the program
 //---------------------
 
-void InitBuild(const std::string Language) // Init the Build system and set the language
+void InitBuild(const std::string& Language) // Init the Build system and set the language
 {
   setvbuf(stdout, NULL, _IONBF, 0);
   Program_Language  = Language; // Set Language(only C ans C++)
@@ -81,9 +81,9 @@ void RunProgram()
   system(__Tmp_output_file.c_str()); // Run
 }
 
-void AddSrcFile   (const std::string Src_File)    { src_file    += Src_File + " "; }
-void AddIncludeDir(const std::string Include_Dir) { include_dir += "-I " + Include_Dir + " ";}
-void AddLibDir    (const std::string Lib_Dir)     { lib_dir     += "-L " + Lib_Dir + " "; }
-void AddLibFile   (const std::string Lib_File)    { lib_file    += "-l"  + Lib_File + " "; }
-void AddOrder     (const std::string Order)       { order       += Order + " "; }
-void SetOutputFile(const std::string Output_File) { output_dir   = Output_File; }
+void AddSrcFile   (const std::string& Src_File)    { src_file    += Src_File + " "; }
+void AddIncludeDir(const std::string& Include_Dir) { include_dir += "-I " + Include_Dir + " ";}
+void AddLibDir    (const std::string& Lib_Dir)     { lib_dir     += "-L " + Lib_Dir + " "; }
+void AddLibFile   (const std::string& Lib_File)    { lib_file    += "-l"  + Lib_File + " "; }
+void AddOrder     (const std::string& Order)       { order       += Order + " "; }
+void SetOutputFile(const std::string& Output_File) { output_dir   = Output_File; }
