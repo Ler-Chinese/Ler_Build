@@ -20,6 +20,7 @@ void AddIncludeDir(const std::string& Include_Dir);
 void AddLibDir    (const std::string& Lib_Dir);
 void AddLibFile   (const std::string& Lib_File);
 void AddOrder     (const std::string& Order);
+void AddRunPara   (const std::string& Para);
 void SetOutputFile(const std::string& Project_Name);
 //---------------------
 
