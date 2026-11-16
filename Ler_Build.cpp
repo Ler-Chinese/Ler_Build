@@ -14,6 +14,7 @@ std::string include_dir;                        // The include path             
 std::string lib_dir;                            // The lib     path             in the program 
 std::string lib_file;                           // The lib file                 in the program 
 std::string order;                              // The additional order         in the program
+std::string parameter;                          // The additional parameter to run the program
 std::string output_dir = "NULL";                // The ouput file (path + file) in the program
 //---------------------
 
@@ -71,12 +72,12 @@ void RunProgram()
   //printf(GREEN "[TIST]" RESET "%s\n", __Tmp_output_dir.c_str());
 
   if(__Tmp_output_dir.empty()) { // the output_dir is just the file name
-    system(output_dir.c_str());
+    system((output_dir + parameter).c_str());
     return;
   }
   //else:
   std::reverse(__Tmp_output_file.begin(), __Tmp_output_file.end());
-  std::filesystem::current_path(__Tmp_output_dir.c_str()); // into the path
+  std::filesystem::current_path((__Tmp_output_dir + parameter).c_str()); // into the path
   
   system(__Tmp_output_file.c_str()); // Run
 }
@@ -86,4 +87,5 @@ void AddIncludeDir(const std::string& Include_Dir) { include_dir += "-I " + Incl
 void AddLibDir    (const std::string& Lib_Dir)     { lib_dir     += "-L " + Lib_Dir + " "; }
 void AddLibFile   (const std::string& Lib_File)    { lib_file    += "-l"  + Lib_File + " "; }
 void AddOrder     (const std::string& Order)       { order       += Order + " "; }
+void AddRunPara   (const std::string& Para)        { parameter   += Para;}
 void SetOutputFile(const std::string& Output_File) { output_dir   = Output_File; }
