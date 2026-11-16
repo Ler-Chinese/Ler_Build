@@ -14,7 +14,7 @@ std::string include_dir;                        // The include path             
 std::string lib_dir;                            // The lib     path             in the program 
 std::string lib_file;                           // The lib file                 in the program 
 std::string order;                              // The additional order         in the program
-std::string parameter;                          // The additional parameter to run the program
+std::string parameter  = " ";                   // The additional parameter to run the program
 std::string output_dir = "NULL";                // The ouput file (path + file) in the program
 //---------------------
 
@@ -71,14 +71,16 @@ void RunProgram()
   printf(GREEN "[INFO]" RESET "Running programe now......\n");
   //printf(GREEN "[TIST]" RESET "%s\n", __Tmp_output_dir.c_str());
 
+  output_dir += parameter;
   if(__Tmp_output_dir.empty()) { // the output_dir is just the file name
-    system((output_dir + parameter).c_str());
+    system(output_dir.c_str());
     return;
   }
   //else:
+  std::filesystem::current_path(__Tmp_output_dir.c_str()); // into the path
+
   std::reverse(__Tmp_output_file.begin(), __Tmp_output_file.end());
-  std::filesystem::current_path((__Tmp_output_dir + parameter).c_str()); // into the path
-  
+  __Tmp_output_file += parameter;
   system(__Tmp_output_file.c_str()); // Run
 }
 
