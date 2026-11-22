@@ -81,6 +81,9 @@ void RunProgram()
 
   std::reverse(__Tmp_output_file.begin(), __Tmp_output_file.end());
   __Tmp_output_file += parameter;
+#ifdef __linux__
+  __Tmp_output_file = std::string("./") + __Tmp_output_file;
+#endif
   system(__Tmp_output_file.c_str()); // Run
 }
 
